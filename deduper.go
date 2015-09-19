@@ -20,6 +20,9 @@ func main() {
 		filenames[f.Name()] = true
 	}
 	for i := 1; i < len(args); i++ {
+		fmt.Println()
+		fmt.Println(args[i])
+		fmt.Println("========================")
 		files, err := ioutil.ReadDir(args[i])
 		if err != nil {
 			log.Fatal(err)
